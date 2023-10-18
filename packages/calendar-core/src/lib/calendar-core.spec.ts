@@ -1,7 +1,7 @@
-import { calendarCore } from './calendar-core';
+import { CatCalendar } from './calendar-core';
 
-describe('calendarCore', () => {
-  it('should work', () => {
-    expect(calendarCore()).toEqual('calendar-core');
+describe('CatCalendar', () => {
+  it('should', () => {
+    expect(0).toBeGreaterThan(2);
   });
 });

@@ -35,6 +35,49 @@
         "passWithNoTests": true,
         "reportsDirectory": "../../coverage/packages/calendar-react"
       }
+    },
+    "storybook": {
+      "executor": "@nx/storybook:storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "packages/calendar-react/.storybook"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@nx/storybook:build",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/calendar-react",
+        "configDir": "packages/calendar-react/.storybook"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "test-storybook": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "test-storybook -c packages/calendar-react/.storybook --url=http://localhost:4400"
+      }
+    },
+    "static-storybook": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "calendar-react:build-storybook",
+        "staticFilePath": "dist/storybook/calendar-react"
+      },
+      "configurations": {
+        "ci": {
+          "buildTarget": "calendar-react:build-storybook:ci"
+        }
+      }
     }
   }
 }

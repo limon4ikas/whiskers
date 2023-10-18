@@ -4,7 +4,9 @@
   "license": "MIT",
   "scripts": {
     "format": "prettier . --write",
-    "build": "nx run-many -t build"
+    "build": "nx run-many -t build",
+    "lint": "nx run-many -t lint",
+    "test": "nx run-many -t test"
   },
   "private": true,
   "devDependencies": {

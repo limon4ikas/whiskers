@@ -4,5 +4,7 @@
   "main": "./index.js",
   "module": "./index.mjs",
   "typings": "./index.d.ts",
-  "dependencies": {}
+  "dependencies": {
+    "@js-temporal/polyfill": "^0.4.4"
+  }
 }

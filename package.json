@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "format": "prettier . --write"
+    "format": "prettier . --write",
+    "build": "nx run-many -t build"
   },
   "private": true,
   "devDependencies": {
@@ -37,7 +38,8 @@
     "verdaccio": "^5.0.4",
     "vite": "~4.3.9",
     "vite-plugin-dts": "~2.3.0",
-    "vitest": "~0.32.0"
+    "vitest": "~0.32.0",
+    "tslib": "^2.6.2"
   },
   "dependencies": {
     "react": "18.2.0",

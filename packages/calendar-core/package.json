@@ -1,5 +1,5 @@
 {
-	"name": "@whiskers/calendar-core",
+	"name": "@limonikas/calendar-core",
 	"version": "0.0.1",
 	"main": "./index.js",
 	"module": "./index.mjs",
